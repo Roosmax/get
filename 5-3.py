@@ -33,7 +33,6 @@ def abc():
             answer += signal1
         signal1/=2
         signal2/=2
-    lst=dec2bin(int(answer))
     voltage= float(int(3.3*answer/256*100)/100)
     x=voltage/3.3*8
     GPIO.output(leds[i],0)

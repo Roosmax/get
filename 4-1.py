@@ -14,14 +14,14 @@ try:
             if 0 <= n and n <= 255:
                 GPIO.output(dac[n], decimal2binary[n])
                 print("Предполагаемое напряжение", round((3.3/256 * n, 2), "B")
-            elif n < 0:
-                print("Меньше нуля")
-            else:
-                print("Ошибка")
+        elif n < 0:
+            print("Меньше нуля")
         else:
-            if a == q:
-                break
             print("Ошибка")
+    else:
+        if a == q:
+            break
+        print("Ошибка")
 finally:
     GPIO.output(dac, 0)
     GPIO.cleanup()
